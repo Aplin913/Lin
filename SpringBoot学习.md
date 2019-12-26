@@ -105,7 +105,7 @@
     </dependency>
     ~~~
 
-    **注**不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
+    **注：**不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
 
     ~~~xml
     <dependency>
@@ -137,7 +137,7 @@
    **注：**
 
    1. 使用 **@Controller** 注解，在对应的方法上，**视图解析器可以解析return 的jsp,html页面**，并且跳转到相应页面。若返回json等内容到页面，则需要加@ResponseBody注解
-   1. **@RestController注解**，相当于 **@Controller+@ResponseBody两个注解的结合**，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
+   1. **@RestController**注解，相当于 **@Controller+@ResponseBody两个注解的结合**，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
 
 3. 在main目录下，新建-> webapp/WEB-INF/jsp 目录，并新建hello.jsp
 
