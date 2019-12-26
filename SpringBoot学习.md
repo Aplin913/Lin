@@ -105,7 +105,7 @@
     </dependency>
     ~~~
 
-    **注：**不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
+    **注：** 不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
 
     ~~~xml
     <dependency>
