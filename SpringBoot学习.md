@@ -1,5 +1,7 @@
 ## Springboot学习
 
+## 第一部分、使用maven管理项目
+
 #### 一、mybatis
 
 * 使用mybatis时，需在pom.xml中添加如下代码：
@@ -12,6 +14,7 @@
   </dependency>
   ~~~
 
+  
 
 * 基本配置：
 
@@ -104,7 +107,7 @@
     </dependency>
     ~~~
 
-    **注：** 不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
+    **注：**不能使用thymeleaf，即pom.xml不能包含以下代码（原因目前不清楚）
 
     ~~~xml
     <dependency>
@@ -135,12 +138,25 @@
 
    **注：**
 
-   1. 使用 **@Controller** 注解，在对应的方法上，**视图解析器可以解析return 的jsp,html页面**，并且跳转到相应页面。若返回json等内容到页面，则需要加@ResponseBody注解
-   1. **@RestController**注解，相当于 **@Controller+@ResponseBody两个注解的结合**，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
+   1. 使用**@Controller** 注解，在对应的方法上，**视图解析器可以解析return 的jsp,html页面**，并且跳转到相应页面。若返回json等内容到页面，则需要加@ResponseBody注解
+   1. **@RestController注解**，相当于**@Controller+@ResponseBody两个注解的结合**，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
 
 3. 在main目录下，新建-> webapp/WEB-INF/jsp 目录，并新建hello.jsp
 
 5. 最后在网页中使用localhost:8080/one，可以对hello.jsp进行访问
 
-   
+### 三、Thymeleaf使用
+
+* 使用Thymeleaf时，需要在pom.xml添加以下内容：
+
+  ```xml
+  <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+  </dependency>
+  ```
+
+  
+
+## 第二部分、使用gradle管理项目
 
